@@ -1,0 +1,14 @@
+1)
+l, w = map(int, input().split("x"))
+
+rad = 6.5
+
+diag = ((l**2 + w**2)**0.5)
+    
+if 2 * rad >= diag:  
+    print("Да")
+else:
+    print("Нет")
+
+2)
+
