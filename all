@@ -11,4 +11,95 @@ else:
     print("Нет")
 
 2)
+A, B = map(int, input().split("x"))
 
+C, D, E = map(int, input().split("x"))
+
+if A >= C and B >= D:
+    print("Да")
+else:
+    print("Нет")
+
+3)
+N, M = map(int, input().split("x"))
+K = int(input())
+
+if (K % N == 0 and K <= N * M) or (K % M == 0 and K <= N * M):
+    print("Успешно")
+else:
+    print("Неосуществимо")
+
+4)
+cell = input()
+
+letter = cell[0]
+number = int(cell[1])
+
+if (ord(letter) + number) % 2 == 0:
+    cell_color = "черный" 
+else:
+   cell_color = "белый"
+
+print(cell_color)
+
+5)
+move = input()
+
+start = move.split('-')[0]
+end = move.split('-')[1]
+
+hor_dist = abs(ord(start[0]) - ord(end[0]))
+vert_dist = abs(int(start[1]) - int(end[1]))
+
+if (hor_dist == 2 and vert_dist == 1) or (hor_dist == 1 and vert_dist == 2):
+    print("Верно")
+else:
+    print("Ошибка")
+
+6)
+N, K, M = map(int, input().split())
+
+res = ((2 * N + K - 1) // K) * M
+
+print(res)
+
+7)
+K = int(input())
+
+p = False
+for i in range(K // 5 + 1):
+    for j in range(K // 7 + 1):
+        if (5*i + 7*j) == K:
+            p = True
+
+if p:
+    print("Да")
+else:
+    print("Нет")
+
+8)
+
+
+9)
+x1 = float(input("x первой: "))
+y1 = float(input("y первой: "))
+r1 = float(input("радиус первой: "))
+
+x2 = float(input("x второй: "))
+y2 = float(input("y второй: "))
+r2 = float(input("радиус второй: "))
+
+distance_centers = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+
+if distance_centers == 0 and r1 == r2:
+    print("Окружности совпадают")
+elif distance_centers == r1 + r2 or distance_centers == abs(r1 - r2):
+    print("Окружности касаются внешним образом")
+elif distance_centers < r1 + r2 and distance_centers > abs(r1 - r2):
+    print("Окружности пересекаются")
+elif distance_centers == r1 or distance_centers == r2:
+    print("Одна окружность вложена в другую")
+else:
+    print("Окружности не пересекаются и не касаются")
+
+10)
